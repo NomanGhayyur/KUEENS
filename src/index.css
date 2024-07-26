@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.swipeToLeft {
+  animation: animatSwipeLeft 0.5s ease-in;
+}
+
+@keyframes animatSwipeLeft {
+  0% {
+    right: -100%;
+  }
+
+  100% {
+    right: 0%;
+  }
+}
+
+
+.swipeToRight {
+  animation: animatSwipeRight 0.5s ease-in;
+}
+
+@keyframes animatSwipeRight {
+  0% {
+    right: 0;
+  }
+
+  100% {
+    right: -100%;
+  }
+}
+
+.heroScale {
+  animation: animatHeroScale 3s ease-in-out infinite;
+}
+
+@keyframes animatHeroScale {
+  0% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+.heroScroll {
+  animation: animatHeroScroll 10s linear infinite;
+}
+
+@keyframes animatHeroScroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.heroBlack {
+  transform: rotate(50deg);
+  transform: translateX(-20);
+}
+
+.contactHome {
+  background: url("./assets/heroBg.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
