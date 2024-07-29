@@ -61,7 +61,7 @@ const Forget = () => {
             className="row py-6 text-white sm:px-8 px-4 login-form sm:w-[400px] w-[360px]"
           >
             <h1 className="text-4xl font-bold text-center mb-6">
-              Krowned Kueens Site New Password
+              Krowned Kueens Site Verification 
             </h1>
             <div className="space-y-6">
               <div className="flex justify-between items-center gap-1 border border-gray-50/30 text-base rounded-full w-full p-3">
