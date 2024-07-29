@@ -3,6 +3,7 @@ import heroBg from "../assets/heroBg.png";
 import { BsArrowUpRight } from "react-icons/bs";
 import Modal from "./Modal";
 import { AuthContext } from "../context/AuthContext";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const { user } = useContext(AuthContext);
@@ -39,12 +40,11 @@ const HeroSection = () => {
                 <BsArrowUpRight title="Logout" onClick={handleLogout} />
               </>
             ) : (
-              <button
-                onClick={() => setOpen(true)}
+              <Link to={"/login"}
                 className="bg-transparent rounded-full p-3 text-white hover:bg-white hover:text-purple-600 text-lg transition-colors duration-300 ease-in-out mt-5 w-fit uppercase font-semibold flex gap-2 items-center"
               >
                 LOGIN/Register <BsArrowUpRight />
-              </button>
+              </Link>
             )}
             <button className="mt-2 bg-primary rounded-full w-fit p-3 text-white hover:bg-[#d6833a]  text-lg transition-colors duration-300 ease-in-out uppercase font-semibold">
               meet the team

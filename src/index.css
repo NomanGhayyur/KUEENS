@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  font-family: "Poppins", sans-serif;
+}
 
 .swipeToLeft {
   animation: animatSwipeLeft 0.5s ease-in;
@@ -15,7 +21,6 @@
     right: 0%;
   }
 }
-
 
 .swipeToRight {
   animation: animatSwipeRight 0.5s ease-in;
@@ -45,8 +50,6 @@
   }
 }
 
-
-
 .heroScroll {
   animation: animatHeroScroll 10s linear infinite;
 }
@@ -61,7 +64,6 @@
   }
 }
 
-
 .heroBlack {
   transform: rotate(50deg);
   transform: translateX(-20);
@@ -71,4 +73,71 @@
   background: url("./assets/heroBg.png") no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.timeline-container-right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 0px;
+  width: 0;
+  z-index: 1;
+  left: -20px;
+  border: medium solid white;
+  border-width: 20px 20px 20px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.timeline-container-left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 0px;
+  width: 0;
+  z-index: 1;
+  right: -20px;
+  border: medium solid white;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline-item {
+  gap: 12rem;
+}
+
+@media (max-width: 1800px) {
+  .timeline-item {
+    gap: 12rem;
+  }
+}
+
+@media (max-width: 1770px) {
+  .timeline-item {
+    gap: 24rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .timeline-item {
+    gap: 18rem;
+  }
+}
+
+.login-bg {
+  background: url("./assets/login-bg.gif") no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.login-form {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 10px;
+}
+
+.loginCheck{
+  accent-color: #fff;
 }

@@ -8,6 +8,13 @@ import { useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import { useAuthContext } from "./hooks/useAuthContext";
+import Timeline from "./components/Timeline";
+import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Forget from "./pages/forget";
 
 const xorEncrypt = (data, key) => {
   const encryptedData = data.split("").map((char, i) => {
@@ -53,14 +60,13 @@ function App() {
   }, []);
   return (
     <>
-      <main className="min-h-screen overflow-hidden">
-        <Navbar />
-        <HeroSection />
-      </main>
-      <About />
-      <MainLineup />
-      <Contact />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/forget-password" element={<Forget />} />
+      </Routes>
+      <Toaster />
     </>
   );
 }

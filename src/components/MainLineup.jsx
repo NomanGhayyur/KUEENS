@@ -209,9 +209,9 @@ const MainLineup = () => {
   return (
     <div className='py-8 bg-primary/80 min-h-screen w-full'>
 
-      <p className='text-white text-center'>Creativity Awaits</p>
+      <p className='text-white text-center text-sm'>Creativity Awaits</p>
 
-      <h4 className='text-white text-6xl mt-3 text-center font-bold'>
+      <h4 className='text-white md:text-6xl text-4xl mt-3 text-center font-bold'>
         Meet the Main Line Up!
       </h4>
       <div className='flex justify-center items-center mt-20 p-4'>
