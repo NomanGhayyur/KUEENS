@@ -4,6 +4,7 @@ import { FaLock } from "react-icons/fa";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import toast from "react-hot-toast";
+import { IoWarning } from "react-icons/io5";
 
 const Forget = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -86,6 +87,10 @@ const Forget = () => {
                 {isSubmitting ? "Wait.." : "Submit OTP"}
               </button>
             </div>
+            <section className="flex text-sm justify-center mt-2">
+              <IoWarning style={{ marginTop: "2px" }} />{" "}
+              <p className="mx-1">Do not reload the page.</p>
+            </section>
           </form>
         </div>
       ) : !isOpen && !newPass ? (
@@ -111,7 +116,6 @@ const Forget = () => {
                 <IoPersonSharp size={16} />
               </div>
             </div>
-
             <div className="w-full p-0 text-center mt-3">
               <button
                 type="submit"
@@ -125,6 +129,10 @@ const Forget = () => {
                   : "Send Recovery Email"}
               </button>
             </div>
+            <section className="flex text-sm justify-center mt-2">
+              <IoWarning style={{ marginTop: "2px" }} />{" "}
+              <p className="mx-1">Do not reload the page.</p>
+            </section>
           </form>
         </div>
       ) : null}
@@ -161,6 +169,10 @@ const Forget = () => {
                 {isSubmitting ? "Wait.." : "Save Password"}
               </button>
             </div>
+            <section className="flex text-sm justify-center mt-2">
+              <IoWarning style={{ marginTop: "2px" }} />{" "}
+              <p className="mx-1">Do not reload the page.</p>
+            </section>
           </form>
         </div>
       )}
