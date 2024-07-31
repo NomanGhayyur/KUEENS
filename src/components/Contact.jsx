@@ -14,7 +14,7 @@ const Contact = () => {
 
     try {
       const response = await axios.post(
-        `https://resort.artevian.com/subscribe`,
+        `https://resort.artevian.com/sendmessage`,
         {
           name,
           email,
