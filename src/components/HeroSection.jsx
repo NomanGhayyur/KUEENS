@@ -35,12 +35,13 @@ const HeroSection = () => {
             {user ? (
               <>
                 <button className="bg-transparent rounded-full p-3 text-white hover:bg-white hover:text-purple-600 text-lg transition-colors duration-300 ease-in-out mt-5 w-fit uppercase font-semibold flex gap-2 items-center">
-                  Helo, {user?.name}
+                  Hello, {user?.name}
                 </button>
                 <BsArrowUpRight title="Logout" onClick={handleLogout} />
               </>
             ) : (
-              <Link to={"/login"}
+              <Link
+                to={"/login"}
                 className="bg-transparent rounded-full p-3 text-white hover:bg-white hover:text-purple-600 text-lg transition-colors duration-300 ease-in-out mt-5 w-fit uppercase font-semibold flex gap-2 items-center"
               >
                 LOGIN/Register <BsArrowUpRight />
