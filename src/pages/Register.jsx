@@ -53,7 +53,7 @@ const Register = () => {
               type="text"
               id="name"
               className="bg-transparent placeholder:text-white outline-none px-1 w-full"
-              placeholder="Prince"
+              placeholder="User name"
               required
               value={name}
               onChange={(e) => setName(e.target.value)}
