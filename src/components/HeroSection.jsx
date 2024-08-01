@@ -33,12 +33,20 @@ const HeroSection = () => {
           </p>
           <div className="flex justify-center items-center flex-col">
             {user ? (
-              <>
-                <button className="bg-transparent rounded-full p-3 text-white hover:bg-white hover:text-purple-600 text-lg transition-colors duration-300 ease-in-out mt-5 w-fit uppercase font-semibold flex gap-2 items-center">
-                  Hello, {user?.name}
+              <div className="flex">
+                <button className="bg-transparent rounded-full pr-0 p-3 text-white  text-lg transition-colors duration-300 ease-in-out mt-5 w-fit uppercase font-semibold flex gap-2 items-center">
+                  Hello, {user?.name}! {"|"}
                 </button>
-                <BsArrowUpRight title="Logout" onClick={handleLogout} />
-              </>
+
+                <button
+                  title="Logout"
+                  onClick={handleLogout}
+                  className="bg-transparent rounded-full  p-3 text-white hover:bg-white hover:text-purple-600 text-lg transition-colors duration-300 ease-in-out mt-5 w-fit uppercase font-semibold flex gap-2 items-center"
+                >
+                  Logout
+                </button>
+                {/* <BsArrowUpRight /> */}
+              </div>
             ) : (
               <Link
                 to={"/login"}
